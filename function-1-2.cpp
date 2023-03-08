@@ -12,7 +12,7 @@ int is_identity(int array[10][10])
         {
             if (array[i] == array[j])
             {
-                if (array[i][j] != 1)
+                if (array[i][j] != 1 && array[j][i] != 0)
                 {
                     flag = 0;
                 }
