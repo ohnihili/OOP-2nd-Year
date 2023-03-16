@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool is_palindrome(int integers[], int length)
+bool is_array_palindrome(int integers[], int length)
 {
     if (length <= 0)
     {
@@ -30,7 +30,7 @@ bool is_palindrome(int integers[], int length)
     return 0;
 }
 
-int sum_array_elements(int integers[], int length)
+int sum_integers(int integers[], int length)
 {
     if (length <= 0)
     {
@@ -47,7 +47,7 @@ int sum_array_elements(int integers[], int length)
     return sum;
 }
 
-int sum_if_palindrome(int integers[], int length)
+int palindrome_sum(int integers[], int length)
 {
     if (length <= 0)
     {
