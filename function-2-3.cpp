@@ -54,11 +54,11 @@ int palindrome_sum(int integers[], int length)
         return -1;
     }
 
-    if (is_palindrome(integers,length) == false)
+    if (is_array_palindrome(integers,length) == false)
     {
         return -2;
     }
     
-    return sum_array_elements(integers,length);
+    return sum_integers(integers,length);
 }
 
