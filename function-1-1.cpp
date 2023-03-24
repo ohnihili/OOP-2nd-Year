@@ -10,8 +10,8 @@ Person* createPersonArray(int n)
     
     for(int i=0;i<n;i++)
     {
-        personArray.namename = "John Doe";
-        personArray.age = 0;
+        personArray->name = "John Doe";
+        personArray->age = 0;
     };
 
 
