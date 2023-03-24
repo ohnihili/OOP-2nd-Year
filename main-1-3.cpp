@@ -4,14 +4,22 @@
 
 using namespace std;
 
-extern PersonList createPersonList(int n);
 extern PersonList deepCopyPersonList(PersonList pl);
 
 int main()
 {
     int number = 5;
 
-    PersonList pList = createPersonList(number);
+    PersonList pList;
+
+    pList.numPeople = number;
+
+    for(int i=0;i<number;i++)
+    {
+        pList.people[i].age = 1;
+        pList.people[i].name = "Ben and Abby";
+    };
+    
 
     PersonList deepPList = deepCopyPersonList(pList);
 
