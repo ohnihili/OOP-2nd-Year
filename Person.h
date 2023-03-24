@@ -7,5 +7,10 @@ struct Person {
     int age;
 };
 
+struct PersonList {
+    Person* people;
+    int numPeople;
+};
+
 
 #endif //PERSON_H
