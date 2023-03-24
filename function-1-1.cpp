@@ -6,12 +6,12 @@ using namespace std;
 
 Person* createPersonArray(int n) 
 {
-    Person personArray[n];
+    Person* personArray = new Person[n];
     
     for(int i=0;i<n;i++)
     {
-        personArray->name = "John Doe";
-        personArray->age = 0;
+        personArray.namename = "John Doe";
+        personArray.age = 0;
     };
 
 

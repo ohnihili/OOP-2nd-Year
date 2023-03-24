@@ -12,5 +12,12 @@ int main()
 
     Person *pArray = createPersonArray(number);
 
-    
+    for (int i=0;i<n;i++)
+    {
+        cout << "Person " << i << ":\n";
+        cout << "Name: " << arr[i].name << "\n";
+        cout << "Age: " << arr[i].age << "\n";
+    }
+    delete[] arr; 
+    return 0;
 }
