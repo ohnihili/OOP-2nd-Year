@@ -6,9 +6,9 @@ using namespace std;
 
 PersonList shallowCopyPersonList(PersonList pl)
 {
-    int n = pl.numPeople;
-
     PersonList shallowPList;
+
+    shallowPList.numPeople = pl.numPeople;
     shallowPList.people = pl.people;
     
     // for (int i=0;i<n;i++)
