@@ -19,7 +19,6 @@ ApartmentBuilding::ApartmentBuilding(int set_capacity)
 ApartmentBuilding::~ApartmentBuilding()
 {
     delete [] current_units;
-    cout << "unit was deleted" << endl;
 };
 
 int ApartmentBuilding::get_capacity(){return capacity;};
