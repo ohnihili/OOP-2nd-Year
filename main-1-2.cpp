@@ -16,11 +16,9 @@ int main()
     cout << no1.get_current_number_of_units() << endl;
     cout << no2.get_current_number_of_units() << endl;
 
-    cout << no1.get_contents() << endl;
-    cout << no2.get_contents() << endl;
-
     no1.add_unit(u1);
     no2.add_unit(u1);
-    
+
+    Unit* units = no1.get_contents();
 
 }
