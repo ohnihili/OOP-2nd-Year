@@ -12,6 +12,6 @@ int Motorbike::getParkingDuration()
     time_t currentTime = time(nullptr);
     // double duration = difftime(currentTime, timeOfEntry);
     // return static_cast<int>(duration * 0.85);
-    int duration = timeOfEntry - currentTime;
+    int duration = currentTime - timeOfEntry;
     return (duration*.85);
 };
