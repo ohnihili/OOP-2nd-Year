@@ -10,6 +10,8 @@ Bus::Bus(int sID) : Vehicle(sID){};
 int Bus::getParkingDuration()
 {
     time_t currentTime = time(nullptr);
-    double duration = difftime(currentTime, timeOfEntry);
-    return static_cast<int>(duration * 0.75);
+    // double duration = difftime(currentTime, timeOfEntry);
+    // return static_cast<int>(duration * 0.75);
+    int duration = timeOfEntry - currentTime;
+    return (duration*.75);
 };
