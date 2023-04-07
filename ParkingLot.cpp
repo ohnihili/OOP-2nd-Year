@@ -17,13 +17,10 @@ ParkingLot::ParkingLot(int smax)
 
 ParkingLot::~ParkingLot()
 {
-    for (int i = 0; i < maxVehicles; i++) 
-        {
-            if (vehicles[i] != nullptr) 
-            {
-                delete vehicles[i];
-            }
-        }
+    // for (int i = 0; i < curVehicles; i++) 
+    // {
+    //     delete vehicles[i];
+    // }
     delete[] vehicles;
 };
 
@@ -59,7 +56,7 @@ void ParkingLot::unparkVehicle(int id)
         return;
     } else 
     {
-        delete vehicles[index];
+        // delete vehicles[index];
         vehicles[index] = nullptr;
         for (int i = index+1; i < curVehicles; i++)
         {
