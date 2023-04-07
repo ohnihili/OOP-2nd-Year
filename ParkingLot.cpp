@@ -17,10 +17,6 @@ ParkingLot::ParkingLot(int smax)
 
 ParkingLot::~ParkingLot()
 {
-    // for (int i = 0; i < curVehicles; i++) 
-    // {
-    //     delete vehicles[i];
-    // }
     delete[] vehicles;
 };
 
@@ -56,7 +52,6 @@ void ParkingLot::unparkVehicle(int id)
         return;
     } else 
     {
-        // delete vehicles[index];
         vehicles[index] = nullptr;
         for (int i = index+1; i < curVehicles; i++)
         {
@@ -66,3 +61,20 @@ void ParkingLot::unparkVehicle(int id)
         curVehicles--;
     }
 };
+
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration)
+{
+    int count = 0;
+
+    for (int i = 0; i < curVehicles; i++)
+    {
+        int parkingDuration = vehicles[i]->getParkingDuration();
+
+        if (parkingDuration > maxParkingDuration)
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
