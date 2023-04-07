@@ -8,7 +8,11 @@ ParkingLot::ParkingLot(int smax)
 {
     maxVehicles = smax;
     curVehicles = 0;
-    vehicles = new Vehicle*[maxVehicles]();
+    vehicles = new Vehicle*[maxVehicles];
+    
+    for (int i = 0; i < maxVehicles; i++) {
+        vehicles[i] = nullptr;
+    }
 };
 
 ParkingLot::~ParkingLot()
