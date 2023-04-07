@@ -52,6 +52,7 @@ void ParkingLot::unparkVehicle(int id)
     if (index == -1)
     {
         cout << "Vehicle not in the lot" << endl;
+        return;
     } else 
     {
         delete vehicles[index];
