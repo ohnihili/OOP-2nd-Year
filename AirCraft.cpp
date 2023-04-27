@@ -4,7 +4,9 @@ AirCraft::AirCraft(){}
 
 AirCraft::AirCraft(int w)
 {
-    this->weight = w;
+    weight = w;
+    numberOfFlights = 0;
+    fuel = 100;
 }         
 
 void AirCraft::refuel()
