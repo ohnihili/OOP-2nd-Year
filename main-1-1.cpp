@@ -10,8 +10,4 @@ int main()
     plane.set_numberOfFlights(5);
     plane.refuel();
     plane.fly(2,1);
-
-
-
-
 }
