@@ -26,7 +26,7 @@ void Helicopter::fly(int headwind, int minutes)
             return;
         };
         
-    } else if (headwind >= 40 &! this->weight > 5670)
+    } else if ((headwind >= 40) && (this->weight < 5670))
     {
         if ((fuel - (0.4*minutes)) > 20)
         {
@@ -37,7 +37,7 @@ void Helicopter::fly(int headwind, int minutes)
             return;
         };
         
-    } else if (this->weight > 5670 &! headwind >= 40)
+    } else if ((this->weight > 5670) && (headwind < 40))
     {
         if ((fuel - (0.2*minutes) - (0.01*(weight-5670)*minutes)) > 20)
         {
@@ -48,7 +48,7 @@ void Helicopter::fly(int headwind, int minutes)
             return;
         };
         
-    } else 
+    } else
     {
         if ((fuel - (0.2*minutes)) > 20)
         {
