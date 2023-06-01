@@ -1,11 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <iostream>
 #include "Effect.h"
 #include "Character.h"
 #include "Trap.h"
 #include "Utils.h"
 #include <vector>
+#include <tuple>
 
 class Game
 {
@@ -33,6 +35,11 @@ class Game
             }
 
             return grid;
+        }
+
+        Game(int numCharacters, int numTraps, int gridWidth, int gridHeight)
+        {
+            initGame(numCharacters,numTraps,gridWidth,gridHeight);
         }
 
         void gameLoop(int maxIterations, double trapActivationDistance)
@@ -69,11 +76,27 @@ class Game
                         }
                     }
                 }
-                if (numChars == 0) {
-                    break;
+
+                for (int i = 0; i < numGrid; i++) 
+                {
+                    if (grid[i]->getType() == 'C') 
+                    {
+                        if (std::get<1>(grid[i]->getPos()) > numGrid)
+                        {
+                            std::cout << "Character has won the game!" << std::endl;    
+                            return;
+                        }
+                    }
                 }
+
                 currentIteration++;
             }
+            
+            if (currentIteration > maxIterations)
+                {
+                    std::cout << "Maximum number of iterations reached. Game over." << std::endl;
+                    return;
+                }
         }
 };
 
