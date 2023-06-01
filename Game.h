@@ -37,10 +37,6 @@ class Game
             return grid;
         }
 
-        // Game(int numCharacters, int numTraps, int gridWidth, int gridHeight)
-        // {
-        //     initGame(numCharacters,numTraps,gridWidth,gridHeight);
-        // }
 
         void gameLoop(int maxIterations, double trapActivationDistance)
         {
@@ -92,11 +88,8 @@ class Game
                 currentIteration++;
             }
             
-            if (currentIteration > maxIterations)
-                {
-                    std::cout << "Maximum number of iterations reached. Game over." << std::endl;
-                    return;
-                }
+            std::cout << "Maximum number of iterations reached. Game over." << std::endl;
+            
         }
 };
 
