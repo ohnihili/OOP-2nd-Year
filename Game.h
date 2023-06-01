@@ -37,10 +37,10 @@ class Game
             return grid;
         }
 
-        Game(int numCharacters, int numTraps, int gridWidth, int gridHeight)
-        {
-            initGame(numCharacters,numTraps,gridWidth,gridHeight);
-        }
+        // Game(int numCharacters, int numTraps, int gridWidth, int gridHeight)
+        // {
+        //     initGame(numCharacters,numTraps,gridWidth,gridHeight);
+        // }
 
         void gameLoop(int maxIterations, double trapActivationDistance)
         {
