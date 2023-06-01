@@ -72,9 +72,14 @@ class Game
                         }
                     }
                 }
+                
+                
 
                 for (int i = 0; i < numGrid; i++) 
                 {
+                    // std::cout << std::get<0>(grid[i]->getPos()) << std::endl;
+                    // std::cout << grid[i]->getType() << std::endl;
+                    
                     if (grid[i]->getType() == 'C') 
                     {
                         if (std::get<1>(grid[i]->getPos()) > numGrid)
@@ -87,9 +92,12 @@ class Game
 
                 currentIteration++;
             }
-            
+
+            if (currentIteration <= maxIterations)
+            {
             std::cout << "Maximum number of iterations reached. Game over." << std::endl;
-            
+            }
+
         }
 };
 
